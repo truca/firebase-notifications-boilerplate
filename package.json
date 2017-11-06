@@ -2,13 +2,13 @@
   "name": "firebase-notifications-boilerplate",
   "version": "0.1.2",
   "description": "Helps you quickly set up notifications with firebase",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
   "scripts": {
     "start": "gulp start",
     "serve": "gulp serve",
     "build": "gulp build",
-    "prepublish": "npm run build"
+    "prepublish": ""
   },
   "repository": {
     "type": "git",

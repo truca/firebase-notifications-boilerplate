@@ -1,10 +1,10 @@
-import firebase from 'firebase'
+var firebase = require('firebase')
 
 /**
  * DESCRIPTION: checks for the config object to be a valid firebase config object
  * config: should be a firebase configuration object. You can find it in the developer console
  */
-const checkFirebaseConfig = (config) => {
+var checkFirebaseConfig = function(config){
     if (!config) return new Error("a config object should be provided")
     if (!config.apiKey) return new Error("config should have a apiKey attribute")
     if (!config.authDomain) return new Error("config should have a authDomain attribute")
@@ -19,14 +19,14 @@ const checkFirebaseConfig = (config) => {
  * DESCRIPTION: asks the user to send him notifications
  * config: should be a firebase configuration object. You can find it in the developer console
  */
-export const requestPermission = config => {
+exports.requestPermission = function(config){
     //firebase errors
-    const checkForErrors = checkFirebaseConfig(config)
+    var checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
 
     firebase.initializeApp(config)
 
-    const messaging = firebase.messaging()
+    var messaging = firebase.messaging()
     return messaging.requestPermission()
         .then( () => {
             console.log('Have Permission')
@@ -47,8 +47,8 @@ export const requestPermission = config => {
  * config: should be a firebase configuration object. You can find it in the developer console
  * onMessage: callback for a message when the app is open. receives a payload object
  */
-export const configAppMessages = (config, onMessage) => {
-    const checkForErrors = checkFirebaseConfig(config)
+exports.configAppMessages = function(config, onMessage){
+    var checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
     if (!onMessage || typeof onMessage === 'function') return new Error("onMessage parameter should be provided and to be function")
 
@@ -61,13 +61,13 @@ export const configAppMessages = (config, onMessage) => {
  * title: String, the title of the notification
  * icon: String, the url for the icon of the notification
  */
-export const swHandleNotifications = (config, title, icon) => {
-    const checkForErrors = checkFirebaseConfig(config)
+exports.swHandleNotifications = function(config, title, icon){
+    var checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
 
-    const messaging = firebase.messaging()
+    var messaging = firebase.messaging()
     messaging.setBackgroundMessageHandler(function (payload) {
-        const options = {
+        var options = {
             body: payload.data.status,
             icon: icon
         }
