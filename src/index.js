@@ -19,7 +19,7 @@ const checkFirebaseConfig = (config) => {
  * DESCRIPTION: asks the user to send him notifications
  * config: should be a firebase configuration object. You can find it in the developer console
  */
-const requestPermission = config => {
+export const requestPermission = config => {
     //firebase errors
     const checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
@@ -47,7 +47,7 @@ const requestPermission = config => {
  * config: should be a firebase configuration object. You can find it in the developer console
  * onMessage: callback for a message when the app is open. receives a payload object
  */
-const configAppMessages = (config, onMessage) => {
+export const configAppMessages = (config, onMessage) => {
     const checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
     if (!onMessage || typeof onMessage === 'function') return new Error("onMessage parameter should be provided and to be function")
@@ -61,7 +61,7 @@ const configAppMessages = (config, onMessage) => {
  * title: String, the title of the notification
  * icon: String, the url for the icon of the notification
  */
-const swHandleNotifications = (config, title, icon) => {
+export const swHandleNotifications = (config, title, icon) => {
     const checkForErrors = checkFirebaseConfig(config)
     if (checkForErrors instanceof Error) return checkForErrors
 
