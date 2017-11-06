@@ -1,8 +1,13 @@
 {
-  "name": "es6-6to5-browserify-boilerplate",
-  "version": "0.0.0",
+  "name": "firebase-notifications-boilerplate",
+  "version": "0.1.0",
   "description": "A repo to play with ES6++",
   "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
+  "scripts": {
+    "start": "gulp start",
+    "serve": "gulp serve",
+    "build": "gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/thoughtram/es6-6to5-browserify-boilerplate.git"
@@ -18,9 +23,12 @@
     "gulp-rename": "^1.2.0",
     "lodash": "^2.4.1",
     "rimraf": "~2.2.8",
-    "watchify": "^2.1.1",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.1.1"
   },
-  "author": "Christoph Burgdorf <christoph@thoughtram.io>",
-  "license": "MIT"
+  "author": "Christoph Burgdorf <christoph@thoughtram.io>, Ignacio Ureta <ignacio.ureta@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^4.6.1"
+  }
 }
