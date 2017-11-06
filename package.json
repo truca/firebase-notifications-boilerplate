@@ -1,6 +1,6 @@
 {
   "name": "firebase-notifications-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helps you quickly set up notifications with firebase",
   "main": "dist/index.js",
   "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
