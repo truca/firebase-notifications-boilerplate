@@ -29,15 +29,15 @@ exports.requestPermission = function(config){
     var messaging = firebase.messaging()
     return messaging.requestPermission()
         .then( () => {
-            console.log('Have Permission')
+            //console.log('Have Permission')
             return messaging.getToken()
         })
         .then(token => {
-            console.log("Token: ", token)
+            //console.log("Token: ", token)
             return token
         })
         .catch(err => {
-            console.log("User didn't provided permission or the app couldn't get the token", err)
+            //console.log("User didn't provided permission or the app couldn't get the token", err)
             return err
         })
 }
