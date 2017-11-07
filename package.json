@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Helps you quickly set up notifications with firebase",
   "main": "src/index.js",
-  "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
+  "homepage": "https://github.com/truca/firebase-notifications-boilerplate",
   "scripts": {
     "start": "gulp start",
     "serve": "gulp serve",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thoughtram/es6-6to5-browserify-boilerplate.git"
+    "url": "git://github.com/truca/firebase-notifications-boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate/issues"
+    "url": "https://github.com/truca/firebase-notifications-boilerplate/issues"
   },
   "devDependencies": {
     "babelify": "~5.0.3",
